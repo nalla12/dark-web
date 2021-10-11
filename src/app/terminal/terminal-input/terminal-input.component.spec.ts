@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TerminalHistoryComponent } from './terminal-history.component';
+import { TerminalInputComponent } from './terminal-input.component';
 
-describe('TerminalHistoryComponent', () => {
-  let component: TerminalHistoryComponent;
-  let fixture: ComponentFixture<TerminalHistoryComponent>;
+describe('TerminalInputComponent', () => {
+  let component: TerminalInputComponent;
+  let fixture: ComponentFixture<TerminalInputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TerminalHistoryComponent ]
+      declarations: [ TerminalInputComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TerminalHistoryComponent);
+    fixture = TestBed.createComponent(TerminalInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

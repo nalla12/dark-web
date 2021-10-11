@@ -1,3 +1,7 @@
+:root {
+  --terminal-font: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+}
+
 body {
   background: #222;
   /*background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(42,42,42,1) 45%, rgba(36,36,36,1) 100%);*/

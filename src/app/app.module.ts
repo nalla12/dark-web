@@ -2,16 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TerminalHistoryComponent } from './terminal-history/terminal-history.component';
+import { TerminalComponent } from './terminal/terminal.component';
+import { FormsModule } from "@angular/forms";
+import { TerminalInputComponent } from './terminal/terminal-input/terminal-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TerminalHistoryComponent
+    TerminalComponent,
+    TerminalInputComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

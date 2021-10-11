@@ -103,7 +103,7 @@ a:hover {
   width: 80%;
   max-width: 600px;
   border-radius: 6px;
-  padding-top: 45px;
+  padding: 45px 1rem 1rem 1rem;
   margin-top: 28px;
   overflow: hidden;
   background-color: rgb(15, 15, 16);
@@ -125,19 +125,8 @@ a:hover {
 }
 
 .terminal pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  color: white;
-  padding: 0 1rem 1rem;
-  margin: 0;
-}
-
-.terminal-input {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  color: white;
-  background: transparent;
-  border: none transparent;
-  outline: none;
-  padding: 0 1rem 1rem;
+  font-family: var(--terminal-font);
+  padding: 0;
   margin: 0;
 }
 
