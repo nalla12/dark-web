@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CmdService } from "../../cmd.service";
 
 @Component({
@@ -16,9 +16,8 @@ export class TerminalInputComponent implements OnInit {
   }
 
   onSubmit() {
-    this.cmdService.checkCmd(this.inputCmd);
-    //this.onSubmitEvent.emit(this.cmd);
     this.enterCmd.emit(this.inputCmd);
+    this.cmdService.checkCmd(this.inputCmd);
     this.inputCmd = '';
   }
 }

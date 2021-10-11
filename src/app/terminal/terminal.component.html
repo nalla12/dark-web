@@ -1,5 +1,28 @@
-<ul class="terminal-history" *ngFor="let line of history">
-  <li><pre>{{ line }}</pre></li>
-</ul>
+<input type="hidden" #selection>
 
-<app-terminal-input (enterCmd)="pushCmd($event)"></app-terminal-input>
+<!--<div class="card-container">
+  <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+
+    <span>Angular Material</span>
+  </div>
+
+  <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+
+    <span>Add PWA Support</span>
+  </div>
+</div>-->
+
+<!-- Terminal -->
+<div class="terminal" [ngSwitch]="selection.value">
+  <span *ngSwitchDefault>Velkommen. Skriv hvad du ønsker at lære om Lead Coding.</span>
+  <span *ngSwitchCase="'material'">ng add @angular/material</span>
+  <span *ngSwitchCase="'pwa'">ng add @angular/pwa</span>
+
+  <ul class="terminal-history" *ngFor="let line of history">
+    <li>{{ line }}</li>
+  </ul>
+
+  <app-terminal-input (enterCmd)="pushCmd($event)"></app-terminal-input>
+</div>

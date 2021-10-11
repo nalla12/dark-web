@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CmdService } from "../cmd.service";
 
 @Component({
   selector: 'app-terminal',
@@ -8,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class TerminalComponent implements OnInit {
   history: string[] = [];
 
-  constructor() { }
+  constructor(private cmdService: CmdService) { }
 
   ngOnInit(): void {
-    this.history = this.getHistory();
+    this.history = this.getHistory()
   }
 
   getHistory() {
-    return ['some text', 'some other text','third line']
+    return this.cmdService.History;
   }
 
   pushCmd(cmd: string) {

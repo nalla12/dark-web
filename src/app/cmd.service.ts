@@ -1,30 +1,34 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CmdService {
-  private currentCmd?: string;
+  private history: string[] = [];
 
   checkCmd(cmd: string | undefined) {
-    this.currentCmd = cmd;
 
     switch (cmd) {
       case 'help':
-        console.log('help');
-        //return 'This is a list of possible commands:<br>Command 1<br>Command 2 etc';
+      case 'hjælp':
+        this.history.push('This is a list of possible commands:<br>Command 1<br>Command 2 etc');
         break;
       case 'contact':
-        console.log('contact');
+      case 'kontakt':
+        this.history.push('Email: example@leadcoding.dk | Tlf.: 88888888');
         break;
       case 'work':
       case 'portfolio':
       case 'cases':
-        console.log('se mit arbejde');
+        this.history.push('Se mit arbejde her: ........');
         break;
       default:
-        console.warn('The command is not recognized');
+        this.history.push('This command is not recognized');
     }
+  }
+
+  get History() {
+    return this.history;
   }
 
 }
