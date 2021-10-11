@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import { CmdService } from "../../../services/cmd.service";
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { CmdService } from "../../cmd.service";
 
 @Component({
   selector: 'app-terminal-input',
@@ -7,9 +7,8 @@ import { CmdService } from "../../../services/cmd.service";
   styleUrls: ['./terminal-input.component.css']
 })
 export class TerminalInputComponent implements OnInit {
-
-  public cmd?: any;
-  //@Output() onSubmitEvent = new EventEmitter<any>();
+  @Output() enterCmd = new EventEmitter();
+  inputCmd?: string | undefined;
 
   constructor(private cmdService: CmdService) { }
 
@@ -17,9 +16,9 @@ export class TerminalInputComponent implements OnInit {
   }
 
   onSubmit() {
-    this.cmdService.runCmd(this.cmd);
+    this.cmdService.checkCmd(this.inputCmd);
     //this.onSubmitEvent.emit(this.cmd);
-
-    this.cmd = '';
+    this.enterCmd.emit(this.inputCmd);
+    this.inputCmd = '';
   }
 }

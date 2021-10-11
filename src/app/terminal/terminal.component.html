@@ -1,2 +1,5 @@
-<pre>terminal works!</pre>
-<app-terminal-input></app-terminal-input>
+<ul class="terminal-history" *ngFor="let line of history">
+  <li><pre>{{ line }}</pre></li>
+</ul>
+
+<app-terminal-input (enterCmd)="pushCmd($event)"></app-terminal-input>

@@ -1,11 +1,11 @@
-input#terminal-input {
+input.terminal-input {
   font-family: var(--terminal-font);
   color: white;
   background: transparent;
   border: none transparent;
   outline: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0 0 0;
   width: 100%;
   box-sizing: border-box;
 }

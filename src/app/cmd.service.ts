@@ -4,16 +4,11 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class CmdService {
-
   private currentCmd?: string;
 
-  runCmd(cmd: string) {
-    console.log(cmd);
+  checkCmd(cmd: string | undefined) {
     this.currentCmd = cmd;
-    this.checkCmd(cmd);
-  }
 
-  checkCmd(cmd: string) {
     switch (cmd) {
       case 'help':
         console.log('help');
@@ -30,10 +25,6 @@ export class CmdService {
       default:
         console.warn('The command is not recognized');
     }
-  }
-
-  help() {
-
   }
 
 }

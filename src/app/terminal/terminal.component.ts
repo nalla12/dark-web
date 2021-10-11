@@ -6,17 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./terminal.component.css']
 })
 export class TerminalComponent implements OnInit {
-
-  public history:string[] = [];
-  //public userInput?: any;
+  history: string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.history = this.getHistory();
   }
 
-  addUserInput(userInput: any) {
-    this.history.push(userInput);
+  getHistory() {
+    return ['some text', 'some other text','third line']
   }
 
+  pushCmd(cmd: string) {
+    this.history.push('Lead-Coding-Website:~ User$ ' + cmd);
+  }
 }
