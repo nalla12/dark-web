@@ -1,24 +1,13 @@
-<input type="hidden" #selection>
+<div class="terminal">
+  <ul class="terminal-menu">
+    <li><a href="#">Kontakt</a></li>
+    <li><a href="#">Arbejde</a></li>
+    <li><a href="#">Hjælp</a></li>
+  </ul>
 
-<!--<div class="card-container">
-  <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+  <span>Velkommen. Skriv hvad du ønsker at lære om Lead Coding.</span>
 
-    <span>Angular Material</span>
-  </div>
-
-  <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
-    <span>Add PWA Support</span>
-  </div>
-</div>-->
-
-<!-- Terminal -->
-<div class="terminal" [ngSwitch]="selection.value">
-  <span *ngSwitchDefault>Velkommen. Skriv hvad du ønsker at lære om Lead Coding.</span>
-  <span *ngSwitchCase="'material'">ng add @angular/material</span>
-  <span *ngSwitchCase="'pwa'">ng add @angular/pwa</span>
+  <br><br>
 
   <ul class="terminal-history" *ngFor="let line of history">
     <li>{{ line }}</li>

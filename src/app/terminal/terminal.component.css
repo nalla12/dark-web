@@ -1,4 +1,4 @@
-:host, pre {
+:host {
   font-family: var(--terminal-font);
   padding: 0;
   margin: 0;
@@ -9,6 +9,7 @@
   position: relative;
   width: 100%;
   max-width: 720px;
+  height: 50vh;
   border-radius: 6px;
   padding: 45px 1rem 1rem 1rem;
   margin: 30px auto 0 auto;
@@ -32,10 +33,28 @@
   text-indent: 4px;
 }
 
-.terminal pre {
-  font-family: var(--terminal-font);
-  padding: 0;
+ul.terminal-menu {
+  background: #555;
+  width: calc(100% + 2rem);
+  height: 25px;
+  position: relative;
+  top: -13px;
+  left: -16px;
   margin: 0;
+  padding: 4px 0 0 0;
+  vertical-align: middle;
+}
+
+ul.terminal-menu li {
+  display: inline;
+  list-style: none;
+  padding: 0 15px;
+}
+
+ul.terminal-menu a {
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: #ddd;
 }
 
 ul.terminal-history {
@@ -45,11 +64,4 @@ ul.terminal-history {
 
 ul.terminal-history li {
   list-style: none;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-  .terminal {
-    width: 100%;
-  }
 }

@@ -1,3 +1,12 @@
+form {
+  display: flex;
+}
+
+span.path {
+  width: 238px;
+  margin-right: 10px;
+}
+
 input.terminal-input {
   font-family: var(--terminal-font);
   color: white;
@@ -5,7 +14,15 @@ input.terminal-input {
   border: none transparent;
   outline: none;
   padding: 0;
-  margin: 1rem 0 0 0;
-  width: 100%;
+  margin: 0;
   box-sizing: border-box;
+  display: inline;
+  flex-grow: 1;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  span.path {
+    width: auto;
+  }
 }
