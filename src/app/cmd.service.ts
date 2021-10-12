@@ -9,6 +9,14 @@ export class CmdService {
   checkCmd(cmd: string | undefined) {
 
     switch (cmd) {
+      case 'about':
+      case 'om':
+        this.history.push('Full-stack programmør med mere end 10 års erfaring.');
+        break;
+      case 'skills':
+      case 'kompetencer':
+        this.history.push('HTML, CSS, PHP, SQL, Java, JavaScript, Angular, CodeIgniter, Bootstrap');
+        break;
       case 'help':
       case 'hjælp':
         this.history.push('This is a list of possible commands:<br>Command 1<br>Command 2 etc');

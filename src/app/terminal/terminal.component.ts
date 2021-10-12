@@ -12,7 +12,7 @@ export class TerminalComponent implements OnInit {
   constructor(private cmdService: CmdService) { }
 
   ngOnInit(): void {
-    this.history = this.getHistory()
+    this.history = this.getHistory();
   }
 
   getHistory() {
@@ -21,5 +21,11 @@ export class TerminalComponent implements OnInit {
 
   pushCmd(cmd: string) {
     this.history.push('Lead-Coding-Website:~ User$ ' + cmd);
+    console.log(this.history);
+  }
+
+  menuClickCmd(inputCmd: string) {
+    this.pushCmd(inputCmd);
+    this.cmdService.checkCmd(inputCmd);
   }
 }

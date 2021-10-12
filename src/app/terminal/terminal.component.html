@@ -1,16 +1,20 @@
 <div class="terminal">
+  <p class="window-title">Terminal</p>
+
   <ul class="terminal-menu">
-    <li><a href="#">Kontakt</a></li>
-    <li><a href="#">Arbejde</a></li>
-    <li><a href="#">Hjælp</a></li>
+    <li><a href="#" (click)="menuClickCmd('about')">Om mig</a></li>
+    <li><a href="#" (click)="menuClickCmd('skills')">Kompetencer</a></li>
+    <li><a href="#" (click)="menuClickCmd('cases')">Cases</a></li>
+    <li><a href="#" (click)="menuClickCmd('contact')">Kontakt</a></li>
+    <li><a href="#" (click)="menuClickCmd('help')">Hjælp</a></li>
   </ul>
 
-  <span>Velkommen. Skriv hvad du ønsker at lære om Lead Coding.</span>
+  <p class="welcome">Velkommen. Skriv hvad du ønsker at lære om Lead Coding, eller vælg et af menupunkterne herover.</p>
 
-  <br><br>
+  <br>
 
-  <ul class="terminal-history" *ngFor="let line of history">
-    <li>{{ line }}</li>
+  <ul class="terminal-history">
+    <li *ngFor="let line of history">{{ line }}</li>
   </ul>
 
   <app-terminal-input (enterCmd)="pushCmd($event)"></app-terminal-input>

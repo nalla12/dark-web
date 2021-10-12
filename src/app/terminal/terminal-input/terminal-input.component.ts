@@ -12,12 +12,11 @@ export class TerminalInputComponent implements OnInit {
 
   constructor(private cmdService: CmdService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  onSubmit() {
-    this.enterCmd.emit(this.inputCmd);
-    this.cmdService.checkCmd(this.inputCmd);
+  onSubmit(inputCmd: string | undefined) {
+    this.enterCmd.emit(inputCmd);
+    this.cmdService.checkCmd(inputCmd);
     this.inputCmd = '';
   }
 }

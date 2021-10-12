@@ -33,14 +33,25 @@
   text-indent: 4px;
 }
 
+.terminal p {
+  margin: 0;
+  padding: 0;
+}
+
+p.window-title {
+  position: relative;
+  top: -39px;
+  text-align: center;
+}
+
 ul.terminal-menu {
   background: #555;
   width: calc(100% + 2rem);
   height: 25px;
   position: relative;
-  top: -13px;
+  top: -32px;
   left: -16px;
-  margin: 0;
+  margin: 0 0 -18px 0;
   padding: 4px 0 0 0;
   vertical-align: middle;
 }
@@ -64,4 +75,5 @@ ul.terminal-history {
 
 ul.terminal-history li {
   list-style: none;
+  margin-bottom: 5px;
 }
