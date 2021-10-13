@@ -7,9 +7,10 @@ span.path {
   margin-right: 10px;
 }
 
-input.terminal-input {
+input[type="text"].terminal-input {
   font-family: var(--terminal-font);
-  color: white;
+  font-size: 1rem;
+  color: #ddd;
   background: transparent;
   border: none transparent;
   outline: none;
