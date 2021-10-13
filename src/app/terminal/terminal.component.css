@@ -38,10 +38,14 @@
   padding: 0;
 }
 
-p.window-title {
+.terminal p.window-title {
   position: relative;
   top: -39px;
   text-align: center;
+}
+
+.terminal p.welcome {
+  margin-bottom: 1rem;
 }
 
 ul.terminal-menu {

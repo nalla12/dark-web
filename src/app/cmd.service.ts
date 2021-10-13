@@ -13,13 +13,14 @@ export class CmdService {
       case 'om':
         this.history.push('Full-stack programmør med mere end 10 års erfaring.');
         break;
-      case 'skills':
-      case 'kompetencer':
-        this.history.push('HTML, CSS, PHP, SQL, Java, JavaScript, Angular, CodeIgniter, Bootstrap');
+      case 'language':
+      case 'languages':
+      case 'sprog':
+        this.history.push('PHP, Java, Swift, Objective-C, C#, TypeScript, JavaScript');
         break;
       case 'help':
       case 'hjælp':
-        this.history.push('This is a list of possible commands:<br>Command 1<br>Command 2 etc');
+        this.history.push('This is a list of possible commands <li>Command 1<li>Command 2 etc');
         break;
       case 'contact':
       case 'kontakt':
