@@ -18,6 +18,8 @@ p {
   flex: 1;
 }
 
+/* Footer */
+
 .content, footer {
   display: flex;
   margin: 82px auto 32px;

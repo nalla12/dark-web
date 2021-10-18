@@ -2,6 +2,15 @@
   <h1>Lead Coding</h1>
 
   <app-terminal></app-terminal>
+
+  <app-details-pane [activePane]="isLeftVisible ? 'left' : 'right'">
+    <div leftPane>LEFT</div>
+    <div rightPane>RIGHT</div>
+  </app-details-pane>
+  <button (click)="isLeftVisible = !isLeftVisible">
+    Toggle panes
+  </button>
+
 </div>
 
 <footer>
