@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { TerminalInputComponent } from './terminal/terminal-input/terminal-input.component';
 import { DetailsPaneComponent } from './details-pane/details-pane.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TerminalComponent,
     TerminalInputComponent,
-    DetailsPaneComponent
+    DetailsPaneComponent,
+    SliderComponent
   ],
     imports: [
       BrowserModule,

@@ -1,0 +1,24 @@
+/* Animated slider */
+:host {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.parent {
+  width: 200%;
+  display: flex;
+}
+
+.parent > div {
+  flex: 1;
+  width: 100%;
+}
+
+.left-pane {
+}
+
+.right-pane {
+  background: rgba(255, 0, 0, 0.384);
+}
