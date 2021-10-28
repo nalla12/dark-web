@@ -13,6 +13,12 @@ export class CmdService {
       case 'om':
         this.history.push('Full-stack programmør med mere end 10 års erfaring.');
         break;
+      case 'case':
+      case 'cases':
+        
+        break;
+      case 'clear':
+        break;
       case 'contact':
       case 'kontakt':
         this.history.push('Email: example@leadcoding.dk | Tlf.: 88888888');
