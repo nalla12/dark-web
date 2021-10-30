@@ -9,6 +9,7 @@ import { CmdService } from "../../cmd.service";
 export class TerminalInputComponent implements OnInit {
   @Output() enterCmd = new EventEmitter();
   inputCmd?: string | undefined;
+  path: string = 'Lead-Coding-Website:~ User$';
 
   constructor(private cmdService: CmdService) { }
 

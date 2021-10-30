@@ -8,6 +8,7 @@ import { CmdService } from "../cmd.service";
 })
 export class TerminalComponent implements OnInit {
   history: string[] = [];
+  path: string = 'Lead-Coding-Website:~ User$';
 
   constructor(private cmdService: CmdService) { }
 
@@ -19,13 +20,16 @@ export class TerminalComponent implements OnInit {
     return this.cmdService.History;
   }
 
-  pushCmd(cmd: string) {
-    this.history.push('Lead-Coding-Website:~ User$ ' + cmd);
-    console.log(this.history);
-  }
-
   menuClickCmd(inputCmd: string) {
     this.pushCmd(inputCmd);
     this.cmdService.checkCmd(inputCmd);
+  }
+
+  pushCmd(cmd: string) {
+    this.history.push(this.path + ' ' + cmd);
+  }
+
+  clearHistory() {
+    this.cmdService.clearHistory('terminal-history');
   }
 }

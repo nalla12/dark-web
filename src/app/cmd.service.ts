@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CmdService {
+  @Output() clearEmitter = new EventEmitter();
   private history: string[] = [];
 
   checkCmd(cmd: string | undefined) {
@@ -15,7 +16,11 @@ export class CmdService {
         break;
       case 'case':
       case 'cases':
-        
+        this.history.push(`<ul>
+          <li><a href="#" class="case1">Case 1</a></li>
+          <li><a href="#" class="case2">Case 2</a></li>
+          <li><a href="#" class="case3">Case 3</a></li>
+        </ul>`);
         break;
       case 'clear':
         break;
@@ -95,6 +100,11 @@ export class CmdService {
 
   get History() {
     return this.history;
+  }
+
+  clearHistory(id:string) {
+    let terminalHistory:any = document.getElementById(id);
+    terminalHistory.innerHTML = '';
   }
 
 }

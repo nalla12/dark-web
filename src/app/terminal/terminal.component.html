@@ -1,7 +1,7 @@
-<div class="terminal">
-  <p class="window-title">Terminal</p>
+<div id="terminal">
+  <p id="window-title">Terminal</p>
 
-  <ul class="terminal-menu">
+  <ul id="terminal-menu">
     <li><a href="#" (click)="menuClickCmd('about')">Om mig</a></li>
     <li><a href="#" (click)="menuClickCmd('services')">Services</a></li>
     <li><a href="#" (click)="menuClickCmd('technologies')">Teknologier</a></li>
@@ -9,9 +9,9 @@
     <li><a href="#" (click)="menuClickCmd('help')">Hjælp</a></li>
   </ul>
 
-  <p class="welcome">Velkommen. Skriv hvad du ønsker at lære om Lead Coding, eller vælg et af menupunkterne herover.</p>
+  <p id="welcome">Velkommen. Skriv hvad du ønsker at lære om Lead Coding, eller vælg et af menupunkterne herover.</p>
 
-  <ul class="terminal-history">
+  <ul id="terminal-history">
     <li *ngFor="let line of history" [innerHTML]="line"></li>
   </ul>
 

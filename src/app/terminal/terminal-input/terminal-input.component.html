@@ -1,5 +1,5 @@
 <form (ngSubmit)="onSubmit(inputCmd)">
-  <span class="path">Lead-Coding-Website:~ User$</span>
+  <span class="path">{{ path }}</span>
   <input type="text" name="terminal-input" class="terminal-input" [(ngModel)]="inputCmd"
          placeholder=">> Skriv en kommando her <<" autofocus>
 </form>
