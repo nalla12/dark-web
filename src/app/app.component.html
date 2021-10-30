@@ -1,7 +1,13 @@
 <div class="content" role="main">
   <h1>Lead Coding</h1>
 
-  <app-terminal></app-terminal>
+  <app-slider [activePane]="isLeftVisible ? 'left' : 'right'">
+    <div leftPane><app-terminal></app-terminal></div>
+    <div rightPane><app-details-pane></app-details-pane></div>
+  </app-slider>
+  <button (click)="isLeftVisible = !isLeftVisible">
+    Toggle panes
+  </button>
 </div>
 
 <footer>

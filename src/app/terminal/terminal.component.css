@@ -5,20 +5,22 @@
   width: 100%;
 }
 
-.terminal {
+#terminal {
   position: relative;
   width: 100%;
   max-width: 720px;
   height: 50vh;
-  border-radius: 6px;
+  border-radius: 12px;
   padding: 45px 1rem 1rem 1rem;
-  margin: 30px auto 0 auto;
+  margin: 0 auto 0 auto;
   overflow: auto;
   background-color: rgb(15, 15, 16);
+  border: 1px solid rgb(77, 77, 77);
   box-sizing: border-box;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
 }
 
-.terminal::before {
+#terminal::before {
   content: "\2022 \2022 \2022";
   position: absolute;
   top: 0;
@@ -33,22 +35,22 @@
   text-indent: 4px;
 }
 
-.terminal p {
+#terminal p {
   margin: 0;
   padding: 0;
 }
 
-.terminal p.window-title {
+#terminal p.window-title {
   position: relative;
   top: -39px;
   text-align: center;
 }
 
-.terminal p.welcome {
+#terminal p.welcome {
   margin-bottom: 1rem;
 }
 
-ul.terminal-menu {
+ul#terminal-menu {
   background: #555;
   width: calc(100% + 2rem);
   height: 25px;
@@ -60,24 +62,24 @@ ul.terminal-menu {
   vertical-align: middle;
 }
 
-ul.terminal-menu li {
+ul#terminal-menu li {
   display: inline;
   list-style: none;
   padding: 0 15px;
 }
 
-ul.terminal-menu a {
+ul#terminal-menu a {
   text-decoration: none;
   font-size: 0.7rem;
   color: #ddd;
 }
 
-ul.terminal-history {
+ul#terminal-history {
   margin: 0;
   padding: 0;
 }
 
-ul.terminal-history li {
+ul#terminal-history li {
   list-style: none;
   margin-bottom: 5px;
 }
